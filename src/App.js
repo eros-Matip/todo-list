@@ -10,7 +10,7 @@ function App() {
       <Header />
       <hr />
       <Body />
-      <Footer method={"React"} school={"Le Reacteur"} name={"Eros"} />
+      <Footer method={"React"} name={"Eros"} />
     </div>
   );
 }

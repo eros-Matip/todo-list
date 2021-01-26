@@ -12,6 +12,7 @@ function Body() {
     event.preventDefault();
     const newElements = [...elements, input];
     setElements(newElements);
+    setInput("");
   };
 
   const handleReset = () => {
@@ -22,6 +23,7 @@ function Body() {
     const newElements = elements.filter(
       (value, index) => indexToDelete !== index
     );
+
     setElements(newElements);
   };
 
@@ -29,12 +31,10 @@ function Body() {
     <div className="body">
       {elements.map((element, index) => (
         <div className="trash" key={index}>
-          <i class="fas fa-trash"></i>
           <p>{element}</p>
-          <button
-            className="trash"
-            onClick={() => handleDelete(index)}
-          ></button>
+          <button onClick={() => handleDelete(index)}>
+            <i className="fas fa-trash"></i>
+          </button>
         </div>
       ))}
       <form onSubmit={handleSubmit}>
@@ -45,9 +45,11 @@ function Body() {
             onChange={handleChange}
             placeholder="New task"
           />
-          <button type="submit" className="btn-submit">
-            Add task
-          </button>
+          {input !== "" && (
+            <button type="submit" className="btn-submit">
+              Add task
+            </button>
+          )}
         </div>
         <div>
           <button type="button" className="btn-reset" onClick={handleReset}>

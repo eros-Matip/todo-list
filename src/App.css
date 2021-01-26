@@ -1,6 +1,15 @@
+/* REGLAGE PAGE */
 .App {
   height: 100vh;
 }
+button:focus {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+/* END REGLAGE PAGE */
+/* HEADER */
 form div:not(:last-child) {
   display: flex;
   align-items: center;
@@ -11,6 +20,8 @@ form div:not(:last-child) {
   align-items: center;
   height: 100px;
 }
+/* END HEADER */
+/* BODY */
 h1 {
   font-weight: 400;
   margin: 20px 20px;
@@ -31,7 +42,7 @@ hr {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 80%;
 }
 button {
   border: none;
@@ -62,14 +73,10 @@ button.btn-reset {
 
 button:hover {
   background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(115, 89, 220);
   color: rgb(115, 89, 220);
   cursor: pointer;
 }
-.footer {
-  text-align: center;
-  margin: 40px;
-}
+
 strong {
   color: rgb(115, 89, 220);
 }
@@ -78,6 +85,9 @@ div.trash {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+}
+div.trash:hover {
+  border: none;
 }
 i {
   color: rgb(115, 89, 220);
@@ -96,3 +106,10 @@ button.trash:hover {
 div.trash :hover {
   text-decoration: line-through;
 }
+/* END BODY */
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin: 40px;
+}
+/* END FOOTER */
